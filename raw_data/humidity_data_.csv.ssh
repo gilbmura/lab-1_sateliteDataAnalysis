@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Define the country name
+COUNTRY="Rwanda"  # Change this to your desired country
+
+# Define input and output file paths
+INPUT_FILE="satelite_temperature_data.csv"
+OUTPUT_DIR="/lab-1_sateliteDataAnalysis/analyzed_data"
+OUTPUT_FILE="${OUTPUT_DIR}/humidity_data_${COUNTRY}.csv"
+
+# Create the output directory if it doesn't exist
+mkdir -p "$OUTPUT_DIR"
+
+# Extract the header
+HEADER=$(head -n 1 "$INPUT_FILE")
+
+# Filter data for the selected country, extract relevant columns, and sort by humidity
+awk -F, -v country="$COUNTRY" '$1 == country' "$INPUT_FILE" | sort -t, -k3 -nr | uniq > temp_sorted.csv
+
+# Combine header and sorted data into the final output file
+echo "$HEADER" > "$OUTPUT_FILE"
+cat temp_sorted.csv >> "$OUTPUT_FILE"
+
+# Remove temporary file
+rm temp_sorted.csv
+
+echo "Filtered and sorted data saved to: $OUTPUT_FILE"
