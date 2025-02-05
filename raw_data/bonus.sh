@@ -31,5 +31,3 @@ fi
 # Extract top 10 unique temperatures from the entire dataset
 cut -d, -f3 "$input" | sort -nr | uniq | head -n 10 > "$top_temperatures_output"
 echo "Top 10 unique temperatures have been saved to $top_temperatures_output."
-
-
