@@ -1,3 +1,0 @@
-#!/bin/bash
-
-awk -F, '{print $3}' satelite_temperature_data.csv | sort -n | tail -n 10
