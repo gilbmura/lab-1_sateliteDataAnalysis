@@ -1,16 +1,4 @@
-## Working on the Project
-
-After forking and setting up collaborators, we followed these steps:
-
-1. **Clone the Repository**  
-   Clone your forked repository to your local machine:
-   ```bash
-   git clone https://github.com/your-username/project-name.git
-
-# raw data
-This directory contains our bash scripts and The file which we use as the input.
-
-# Analyzed Data
+## Analyzed Data
 
 This directory contains the results of the analysis conducted on the satellite temperature dataset`satelite_temperature_data.csv`from the scripts written in the raw_data directory. The analysis was performed using various Linux commands such as `grep`, `sort`, `head`, etc., and includes the following outputs:
 
