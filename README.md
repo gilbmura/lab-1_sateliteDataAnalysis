@@ -1,26 +1,16 @@
-# Guidelines
+## Overview
 
-## Before You Start
+This project provides tools to analyze satellite temperature and humidity data using Linux commands. The analysis involves extracting the top 10 highest temperatures and filtering the data by country and sorting by humidity.
 
-Follow these steps to prepare for your work:
+## Task 1: Clean the Repository
 
-1. **Fork the Repository**  
-   Click on the **Fork** button at the top of the repository page. This creates a copy of the repository for your group.
+Before starting the analysis, some cleanup of the repository is required. Follow these steps to clean and organize the repository:
 
-2. **Add Collaborators**  
-   Once the repository is forked:
-   - Go to **Settings** > **Collaborators and teams** > **Add people**.
-   - Invite all group members as collaborators.
+1. **Rename the directory `rename_directory` to `analyzed_data`**:
+   Rename the directory that holds the analysis results to `analyzed_data`:
 
----
-
-## Working on the Project
-
-After forking and setting up collaborators, follow these steps:
-
-1. **Clone the Repository**  
-   Clone your forked repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/project-name.git
+   mv rename_directory analyzed_data
+
    ```
 
